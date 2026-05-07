@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #e7c9c2;
+  color: var(--color-ink);
+}

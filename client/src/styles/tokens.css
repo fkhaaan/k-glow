@@ -1,0 +1,27 @@
+:root {
+  --color-background: #faf7f2;
+  --color-foreground: #2d2824;
+  --color-ink: #1f1b18;
+  --color-muted: #726861;
+  --color-soft: #f3ebe3;
+  --color-line: #e5d9cf;
+  --color-rosewood: #9d6a5d;
+  --color-cocoa: #4a3830;
+  --color-sage: #dfe7d8;
+
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-body: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo",
+    "Malgun Gothic", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  --space-section-sm: 4rem;
+  --space-section-md: 5rem;
+  --space-section-lg: 6rem;
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
+}
