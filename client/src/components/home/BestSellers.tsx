@@ -1,41 +1,12 @@
+import Link from "next/link";
+
 import { Container } from "@/components/common/Container";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { ProductCard } from "@/components/product/ProductCard";
 import { sectionSpacing } from "@/constants/design";
-import type { Product } from "@/types/product";
+import { productService } from "@/services/product.service";
 
-const products: Product[] = [
-  {
-    id: "dew-barrier-cream",
-    name: "Dew Barrier Cream",
-    category: "Moisturizer",
-    price: "$42",
-    badge: "Best",
-    tone: "cream",
-  },
-  {
-    id: "hanbang-glow-serum",
-    name: "Hanbang Glow Serum",
-    category: "Serum",
-    price: "$48",
-    badge: "New",
-    tone: "rose",
-  },
-  {
-    id: "calm-cica-essence",
-    name: "Calm Cica Essence",
-    category: "Essence",
-    price: "$36",
-    tone: "sage",
-  },
-  {
-    id: "silk-sun-milk",
-    name: "Silk Sun Milk SPF",
-    category: "SPF",
-    price: "$34",
-    tone: "cream",
-  },
-];
+const products = productService.getFeaturedProducts();
 
 export function BestSellers() {
   return (
@@ -45,14 +16,14 @@ export function BestSellers() {
           <SectionTitle
             eyebrow="Best Sellers"
             title="Daily icons with a soft-focus finish."
-            description="Placeholder products establish the ecommerce grid for future inventory data."
+            description="A refined edit of cushiony creams, glassy serums, calming essences, and featherlight daily SPF."
           />
-          <a
+          <Link
             className="text-sm font-semibold text-[var(--color-rosewood)] hover:text-[var(--color-ink)]"
-            href="#categories"
+            href="/shop"
           >
-            View routine categories
-          </a>
+            View full shop
+          </Link>
         </div>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
